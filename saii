@@ -1,0 +1,576 @@
+2019-09-03 07:07:04.133  INFO 19421 --- [restartedMain] c.a.r.RusaSoftWebapiApplication          : Starting RusaSoftWebapiApplication on ubuntu-Lenovo-ideapad-330-15IKB with PID 19421 (started by ubuntu in /home/ubuntu/rusa/RusaSoftWebapi (1)/RusaSoftWebapi)
+2019-09-03 07:07:04.142  INFO 19421 --- [restartedMain] c.a.r.RusaSoftWebapiApplication          : No active profile set, falling back to default profiles: default
+2019-09-03 07:07:04.385  INFO 19421 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-03 07:07:04.386  INFO 19421 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-03 07:07:13.761  INFO 19421 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-03 07:07:14.401  INFO 19421 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 601ms. Found 281 repository interfaces.
+2019-09-03 07:07:15.329  INFO 19421 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$78d50b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 07:07:15.343  INFO 19421 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$870d9de2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-03 07:07:16.109  INFO 19421 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8094 (http)
+2019-09-03 07:07:16.254  INFO 19421 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-03 07:07:16.255  INFO 19421 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-09-03 07:07:16.293  INFO 19421 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-09-03 07:07:16.434  INFO 19421 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-03 07:07:16.435  INFO 19421 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12048 ms
+2019-09-03 07:07:17.454  INFO 19421 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-03 07:07:20.233  INFO 19421 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-03 07:07:20.408  INFO 19421 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-03 07:07:20.739  INFO 19421 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-09-03 07:07:20.741  INFO 19421 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-03 07:07:21.258  INFO 19421 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-03 07:07:21.508  INFO 19421 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-09-03 07:07:24.513  INFO 19421 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 07:07:25.035  INFO 19421 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-03 07:07:30.601  INFO 19421 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-03 07:07:30.649  WARN 19421 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-03 07:07:31.072  INFO 19421 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-03 07:07:31.187  INFO 19421 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8094 (http) with context path ''
+2019-09-03 07:07:31.193  INFO 19421 --- [restartedMain] c.a.r.RusaSoftWebapiApplication          : Started RusaSoftWebapiApplication in 29.414 seconds (JVM running for 36.35)
+2019-09-03 07:09:46.580  INFO 19421 --- [http-nio-8094-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-03 07:09:46.608  INFO 19421 --- [http-nio-8094-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-03 07:09:46.627  INFO 19421 --- [http-nio-8094-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-09-03 07:09:47.395 DEBUG 19421 --- [http-nio-8094-exec-1] org.hibernate.SQL                        : 
+    select
+        academicye0_.year_id as year_id1_114_,
+        academicye0_.academic_year as academic2_114_,
+        academicye0_.del_status as del_stat3_114_,
+        academicye0_.is_closed as is_close4_114_,
+        academicye0_.is_current as is_curre5_114_,
+        academicye0_.maker_datetime as maker_da6_114_,
+        academicye0_.maker_id as maker_id7_114_,
+        academicye0_.type as type8_114_ 
+    from
+        m_academic_year academicye0_ 
+    where
+        academicye0_.type=? 
+        and academicye0_.del_status=? 
+    order by
+        academicye0_.year_id desc
+2019-09-03 07:09:47.498 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:09:47.498 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:06.095 DEBUG 19421 --- [http-nio-8094-exec-3] org.hibernate.SQL                        : 
+    select
+        staff0_.faculty_id as faculty_1_122_,
+        staff0_.checker_datetime as checker11_122_,
+        staff0_.checker_user_id as checker12_122_,
+        staff0_.contact_no as contact13_122_,
+        staff0_.current_designation_id as current14_122_,
+        staff0_.del_status as del_sta15_122_,
+        staff0_.dept_id as dept_id16_122_,
+        staff0_.edit_user_id as edit_us17_122_,
+        staff0_.email as email18_122_,
+        staff0_.extraint1 as extrain19_122_,
+        staff0_.extravarchar1 as extrava20_122_,
+        staff0_.faculty_first_name as faculty21_122_,
+        staff0_.faculty_last_name as faculty22_122_,
+        staff0_.faculty_middel_name as faculty23_122_,
+        staff0_.highest_qualification as highest24_122_,
+        staff0_.hightest_qualification_year as hightes25_122_,
+        staff0_.institute_id as institu26_122_,
+        staff0_.is_acc_off as is_acc_27_122_,
+        staff0_.is_active as is_acti28_122_,
+        staff0_.is_blocked as is_bloc29_122_,
+        staff0_.is_dean as is_dean30_122_,
+        staff0_.is_enrolled as is_enro31_122_,
+        staff0_.is_ext_act_off as is_ext_32_122_,
+        staff0_.is_faculty as is_facu33_122_,
+        staff0_.is_hod as is_hod34_122_,
+        staff0_.is_iqac as is_iqac35_122_,
+        staff0_.is_librarian as is_libr36_122_,
+        staff0_.is_principal as is_prin37_122_,
+        staff0_.is_same as is_same38_122_,
+        staff0_.is_student as is_stud39_122_,
+        staff0_.is_tpo as is_tpo40_122_,
+        staff0_.is_working as is_work41_122_,
+        staff0_.joining_date as joining42_122_,
+        staff0_.last_updated_datetime as last_up43_122_,
+        staff0_.maker_enter_datetime as maker_e44_122_,
+        staff0_.maker_user_id as maker_u45_122_,
+        staff0_.password as passwor46_122_,
+        staff0_.realiving_date as realivi47_122_,
+        staff0_.role_ids as role_id48_122_,
+        staff0_.teaching_to as teachin49_122_,
+        staff0_.type as type50_122_ 
+    from
+        m_faculty staff0_ 
+    where
+        staff0_.del_status=? 
+        and staff0_.is_active=? 
+        and staff0_.email=? 
+        and (
+            staff0_.password like ?
+        ) 
+        and staff0_.is_blocked=?
+2019-09-03 07:10:06.174 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:06.175 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:06.175 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [paragthinge22@gmail.com]
+2019-09-03 07:10:06.176 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [%Parag@13244%]
+2019-09-03 07:10:06.176 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [0]
+2019-09-03 07:10:06.327 DEBUG 19421 --- [http-nio-8094-exec-4] org.hibernate.SQL                        : 
+    select
+        academicye0_.year_id as year_id1_114_,
+        academicye0_.academic_year as academic2_114_,
+        academicye0_.del_status as del_stat3_114_,
+        academicye0_.is_closed as is_close4_114_,
+        academicye0_.is_current as is_curre5_114_,
+        academicye0_.maker_datetime as maker_da6_114_,
+        academicye0_.maker_id as maker_id7_114_,
+        academicye0_.type as type8_114_ 
+    from
+        m_academic_year academicye0_ 
+    where
+        academicye0_.type=? 
+        and academicye0_.del_status=? 
+    order by
+        academicye0_.year_id desc
+2019-09-03 07:10:06.328 TRACE 19421 --- [http-nio-8094-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:06.328 TRACE 19421 --- [http-nio-8094-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:06.614 DEBUG 19421 --- [http-nio-8094-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        t_login_log
+        (del_status, ex_int1, ex_int2, ex_var1, ex_var2, ip_address, login_date, user_agent, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2019-09-03 07:10:06.615 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [1]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [NA]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [NA]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [ip6-localhost/0:0:0:0:0:0:0:1]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [2019-09-03 07:10:06]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36]
+2019-09-03 07:10:06.616 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [9] as [INTEGER] - [94]
+2019-09-03 07:10:06.713  WARN 19421 --- [http-nio-8094-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2019-09-03 07:10:06.713 ERROR 19421 --- [http-nio-8094-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'log_id' doesn't have a default value
+2019-09-03 07:10:06.879 DEBUG 19421 --- [http-nio-8094-exec-6] org.hibernate.SQL                        : 
+    select
+        academicye0_.year_id as year_id1_114_,
+        academicye0_.academic_year as academic2_114_,
+        academicye0_.del_status as del_stat3_114_,
+        academicye0_.is_closed as is_close4_114_,
+        academicye0_.is_current as is_curre5_114_,
+        academicye0_.maker_datetime as maker_da6_114_,
+        academicye0_.maker_id as maker_id7_114_,
+        academicye0_.type as type8_114_ 
+    from
+        m_academic_year academicye0_ 
+    where
+        academicye0_.type=? 
+        and academicye0_.del_status=? 
+    order by
+        academicye0_.year_id desc
+2019-09-03 07:10:06.880 TRACE 19421 --- [http-nio-8094-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [0]
+2019-09-03 07:10:06.880 TRACE 19421 --- [http-nio-8094-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:07.003 DEBUG 19421 --- [http-nio-8094-exec-7] org.hibernate.SQL                        : 
+    select
+        academicye0_.year_id as year_id1_114_,
+        academicye0_.academic_year as academic2_114_,
+        academicye0_.del_status as del_stat3_114_,
+        academicye0_.is_closed as is_close4_114_,
+        academicye0_.is_current as is_curre5_114_,
+        academicye0_.maker_datetime as maker_da6_114_,
+        academicye0_.maker_id as maker_id7_114_,
+        academicye0_.type as type8_114_ 
+    from
+        m_academic_year academicye0_ 
+    where
+        academicye0_.is_current=? 
+        and academicye0_.del_status=?
+2019-09-03 07:10:07.004 TRACE 19421 --- [http-nio-8094-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:07.004 TRACE 19421 --- [http-nio-8094-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:07.118 DEBUG 19421 --- [http-nio-8094-exec-8] org.hibernate.SQL                        : 
+    select
+        institute0_.institute_id as institut1_127_,
+        institute0_.aishe_code as aishe_co2_127_,
+        institute0_.checker_datetime as checker_3_127_,
+        institute0_.checker_user_id as checker_4_127_,
+        institute0_.contact_no as contact_5_127_,
+        institute0_.del_status as del_stat6_127_,
+        institute0_.district as district7_127_,
+        institute0_.email as email8_127_,
+        institute0_.ex_int1 as ex_int9_127_,
+        institute0_.ex_int2 as ex_int10_127_,
+        institute0_.ex_var1 as ex_var11_127_,
+        institute0_.ex_var2 as ex_var12_127_,
+        institute0_.institute_add as institu13_127_,
+        institute0_.institute_name as institu14_127_,
+        institute0_.is_active as is_acti15_127_,
+        institute0_.is_enroll_system as is_enro16_127_,
+        institute0_.is_registration as is_regi17_127_,
+        institute0_.last_updated_datetime as last_up18_127_,
+        institute0_.maker_enter_datetime as maker_e19_127_,
+        institute0_.maker_user_id as maker_u20_127_,
+        institute0_.pincode as pincode21_127_,
+        institute0_.presiden_contact as preside22_127_,
+        institute0_.president_email as preside23_127_,
+        institute0_.president_name as preside24_127_,
+        institute0_.principal_name as princip25_127_,
+        institute0_.reg_date as reg_dat26_127_,
+        institute0_.state as state27_127_,
+        institute0_.taluka as taluka28_127_,
+        institute0_.trust_add as trust_a29_127_,
+        institute0_.trust_contact_no as trust_c30_127_,
+        institute0_.trust_name as trust_n31_127_,
+        institute0_.user_type as user_ty32_127_,
+        institute0_.village as village33_127_ 
+    from
+        m_institute institute0_ 
+    where
+        institute0_.institute_id=?
+2019-09-03 07:10:07.118 TRACE 19421 --- [http-nio-8094-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:07.357 DEBUG 19421 --- [http-nio-8094-exec-9] org.hibernate.SQL                        : 
+    select
+        assignrole0_.role_id as role_id1_116_,
+        assignrole0_.del_status as del_stat2_116_,
+        assignrole0_.role_json as role_jso3_116_,
+        assignrole0_.role_name as role_nam4_116_ 
+    from
+        m_assign_role assignrole0_ 
+    where
+        assignrole0_.role_id=?
+2019-09-03 07:10:07.358 TRACE 19421 --- [http-nio-8094-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [2]
+2019-09-03 07:10:07.621 DEBUG 19421 --- [http-nio-8094-exec-10] org.hibernate.SQL                        : 
+    select
+        state0_.state_id as state_id1_142_,
+        state0_.del_status as del_stat2_142_,
+        state0_.ex_var1 as ex_var3_142_,
+        state0_.region as region4_142_,
+        state0_.state_name as state_na5_142_ 
+    from
+        m_state state0_ 
+    where
+        state0_.del_status=?
+2019-09-03 07:10:07.622 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:07.815 DEBUG 19421 --- [http-nio-8094-exec-1] org.hibernate.SQL                        : 
+    SELECT
+        UUID() AS id,
+        COUNT(m_faculty.faculty_id) as count,
+        0 as count1 ,
+        0 as data1,
+        0 as data2 
+    FROM
+        m_faculty 
+    WHERE
+        m_faculty.institute_id =? 
+        AND m_faculty.del_status = 1 
+        AND m_faculty.is_active = 1 
+        AND m_faculty.is_blocked=0 
+        AND m_faculty.is_faculty=1 
+2019-09-03 07:10:07.816 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:07.907 DEBUG 19421 --- [http-nio-8094-exec-1] org.hibernate.SQL                        : 
+    SELECT
+        UUID() AS id,
+        COUNT(m_faculty.faculty_id) as count,
+        0 as count1,
+        0 as data1,
+        0 as data2 
+    FROM
+        m_faculty 
+    WHERE
+        m_faculty.institute_id=? 
+        AND m_faculty.del_status = 1 
+        AND m_faculty.is_active = 1 
+        AND m_faculty.is_blocked=0 
+        AND m_faculty.is_faculty=1 
+        AND m_faculty.highest_qualification=1 
+2019-09-03 07:10:07.908 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:07.991 DEBUG 19421 --- [http-nio-8094-exec-1] org.hibernate.SQL                        : 
+    SELECT
+        UUID() AS id,
+        SUM(        t_program_student_location.female_student    ) AS count,
+        SUM(        t_program_student_location.male_student    ) AS count1,
+        SUM(        t_program_student_location.trans_student    ) AS data1,
+        0 AS data2 
+    FROM
+        t_program_student_location  
+    WHERE
+        t_program_student_location.institute_id =? 
+        AND t_program_student_location.del_status = 1 
+        AND t_program_student_location.is_active = 1 
+        AND t_program_student_location.year_id =(
+            SELECT
+                m_academic_year.year_id    
+            FROM
+                m_academic_year    
+            WHERE
+                m_academic_year.is_current = 1
+        ) 
+2019-09-03 07:10:07.992 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:09.342 DEBUG 19421 --- [http-nio-8094-exec-3] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        m_academic_year 
+    where
+        m_academic_year.seq_no <=  (
+            select
+                m_academic_year.seq_no 
+            from
+                m_academic_year 
+            where
+                m_academic_year.is_current=1
+        ) 
+        AND m_academic_year.del_status=1 
+    order by
+        seq_no desc limit 5
+2019-09-03 07:10:09.343 DEBUG 19421 --- [http-nio-8094-exec-2] org.hibernate.SQL                        : 
+    SELECT
+        t_program.name_of_program,
+        t_prog_sanc_intake.sanc_intake,
+        m_program_type.program_name,
+        SUM(         t_program_student_location.loc_tot_student     ) AS total_admitted,
+        t_program.program_id 
+    FROM
+        t_program,
+        t_prog_sanc_intake,
+        t_program_student_location,
+        m_institute,
+        m_academic_year,
+        m_program_type 
+    WHERE
+        m_program_type.program_id = t_program.program_type 
+        AND t_program.institute_id = m_institute.institute_id 
+        AND t_prog_sanc_intake.inst_id = m_institute.institute_id 
+        AND t_prog_sanc_intake.ac_year_id = m_academic_year.year_id 
+        AND m_academic_year.is_current = 1 
+        AND t_program.program_id = t_prog_sanc_intake.program_id 
+        AND m_institute.institute_id =? 
+        AND t_program.del_status = 1 
+        AND t_program.is_active = 1 
+        AND t_program_student_location.institute_id = m_institute.institute_id 
+        AND t_program_student_location.program_id = t_program.program_id 
+        AND t_program_student_location.del_status = 1 
+        AND t_program_student_location.is_active = 1 
+        AND t_program_student_location.year_id = m_academic_year.year_id   
+    GROUP BY
+        t_program_student_location.program_id
+2019-09-03 07:10:09.349 DEBUG 19421 --- [http-nio-8094-exec-4] org.hibernate.SQL                        : 
+    SELECT
+        t_faculty_subject.sub_id,
+        t_faculty_subject.sub_name,
+        t_faculty_subject.sub_stu_appear,
+        t_faculty_subject.sub_stu_passed 
+    FROM
+        t_faculty_subject,
+        m_faculty 
+    WHERE
+        m_faculty.institute_id =? 
+        AND t_faculty_subject.del_status = 1 
+        AND t_faculty_subject.is_active = 1 
+        AND t_faculty_subject.year_id =(
+            SELECT
+                m_academic_year.year_id     
+            FROM
+                m_academic_year     
+            WHERE
+                m_academic_year.is_current = 1 
+        ) 
+        AND t_faculty_subject.faculty_id =? 
+        AND t_faculty_subject.faculty_id = m_faculty.faculty_id 
+2019-09-03 07:10:09.444 TRACE 19421 --- [http-nio-8094-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:09.453 TRACE 19421 --- [http-nio-8094-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:09.454 TRACE 19421 --- [http-nio-8094-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [94]
+2019-09-03 07:10:09.558 DEBUG 19421 --- [http-nio-8094-exec-3] org.hibernate.SQL                        : 
+    SELECT
+        SUM(t_prog_sanc_intake.sanc_intake) AS total_sanc_intake,
+        m_academic_year.academic_year,
+        t_institute_info_detail.no_current_admited_stnt,
+        m_institute.institute_name,
+        m_academic_year.year_id 
+    FROM
+        t_prog_sanc_intake,
+        t_institute_info_detail,
+        m_academic_year,
+        m_institute 
+    WHERE
+        t_prog_sanc_intake.ac_year_id = m_academic_year.year_id 
+        AND t_institute_info_detail.year_id = m_academic_year.year_id 
+        AND t_institute_info_detail.institute_id = m_institute.institute_id 
+        AND t_prog_sanc_intake.inst_id = m_institute.institute_id 
+        AND t_prog_sanc_intake.del_status = 1 
+        AND t_prog_sanc_intake.is_active = 1 
+        AND t_institute_info_detail.del_status = 1 
+        AND m_institute.institute_id =? 
+        AND m_academic_year.year_id IN(
+            ?, ?, ?, ?, ?
+        ) 
+    GROUP BY
+        m_academic_year.year_id
+2019-09-03 07:10:09.559 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:10:09.559 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [7]
+2019-09-03 07:10:09.559 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [6]
+2019-09-03 07:10:09.560 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [5]
+2019-09-03 07:10:09.560 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [3]
+2019-09-03 07:10:09.560 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [INTEGER] - [8]
+2019-09-03 07:10:09.564  WARN 19421 --- [http-nio-8094-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1055, SQLState: 42000
+2019-09-03 07:10:09.565 ERROR 19421 --- [http-nio-8094-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'rusasoft_db1.t_program.name_of_program' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+2019-09-03 07:10:09.669  WARN 19421 --- [http-nio-8094-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1055, SQLState: 42000
+2019-09-03 07:10:09.670 ERROR 19421 --- [http-nio-8094-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'rusasoft_db1.t_institute_info_detail.no_current_admited_stnt' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+2019-09-03 07:10:18.958 DEBUG 19421 --- [http-nio-8094-exec-8] org.hibernate.SQL                        : 
+    select
+        dept0_.dept_id as dept_id1_119_,
+        dept0_.add_date as add_date2_119_,
+        dept0_.del_status as del_stat3_119_,
+        dept0_.dept_name as dept_nam4_119_,
+        dept0_.ex_int1 as ex_int5_119_,
+        dept0_.ex_int2 as ex_int6_119_,
+        dept0_.ex_var1 as ex_var7_119_,
+        dept0_.ex_var2 as ex_var8_119_,
+        dept0_.institute_id as institut9_119_,
+        dept0_.is_active as is_acti10_119_,
+        dept0_.maker_user_id as maker_u11_119_ 
+    from
+        m_dept dept0_ 
+    where
+        dept0_.del_status=? 
+        and dept0_.is_active=? 
+        and dept0_.institute_id=? 
+    order by
+        dept0_.dept_id desc
+2019-09-03 07:10:19.046 TRACE 19421 --- [http-nio-8094-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:19.046 TRACE 19421 --- [http-nio-8094-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:19.046 TRACE 19421 --- [http-nio-8094-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [68]
+2019-09-03 07:10:32.666 DEBUG 19421 --- [http-nio-8094-exec-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        m_dept
+        (add_date, del_status, dept_name, ex_int1, ex_int2, ex_var1, ex_var2, institute_id, is_active, maker_user_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2019-09-03 07:10:32.666 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [2019-09-03]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Dept1]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [INTEGER] - [0]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [INTEGER] - [0]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [NA]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [NA]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [INTEGER] - [68]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [9] as [INTEGER] - [1]
+2019-09-03 07:10:32.667 TRACE 19421 --- [http-nio-8094-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [10] as [INTEGER] - [94]
+2019-09-03 07:10:32.745  WARN 19421 --- [http-nio-8094-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2019-09-03 07:10:32.746 ERROR 19421 --- [http-nio-8094-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'dept_id' doesn't have a default value
+2019-09-03 07:10:32.950 DEBUG 19421 --- [http-nio-8094-exec-1] org.hibernate.SQL                        : 
+    select
+        dept0_.dept_id as dept_id1_119_,
+        dept0_.add_date as add_date2_119_,
+        dept0_.del_status as del_stat3_119_,
+        dept0_.dept_name as dept_nam4_119_,
+        dept0_.ex_int1 as ex_int5_119_,
+        dept0_.ex_int2 as ex_int6_119_,
+        dept0_.ex_var1 as ex_var7_119_,
+        dept0_.ex_var2 as ex_var8_119_,
+        dept0_.institute_id as institut9_119_,
+        dept0_.is_active as is_acti10_119_,
+        dept0_.maker_user_id as maker_u11_119_ 
+    from
+        m_dept dept0_ 
+    where
+        dept0_.del_status=? 
+        and dept0_.is_active=? 
+        and dept0_.institute_id=? 
+    order by
+        dept0_.dept_id desc
+2019-09-03 07:10:32.950 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:10:32.950 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:10:32.951 TRACE 19421 --- [http-nio-8094-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [68]
+2019-09-03 07:11:53.997 DEBUG 19421 --- [http-nio-8094-exec-4] org.hibernate.SQL                        : 
+    SELECT
+        i.faculty_id,
+        i.faculty_first_name,
+        i.joining_date,
+        i.contact_no,
+        i.email,
+        d.designation_name 
+    FROM
+        m_faculty i,
+        m_designation d 
+    WHERE
+        i.del_status=1 
+        AND i.current_designation_id=d.designation_id 
+        AND i.institute_id=? 
+        AND i.is_iqac=1 
+        AND i.is_blocked=0 
+    ORDER BY
+        i.faculty_id DESC 
+2019-09-03 07:11:54.092 TRACE 19421 --- [http-nio-8094-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:11:56.164 DEBUG 19421 --- [http-nio-8094-exec-3] org.hibernate.SQL                        : 
+    SELECT
+        * 
+    FROM
+        m_designation 
+    WHERE
+        del_status = 1 
+        AND is_active = 1 
+        And desg_no IN(
+            ?
+        )
+2019-09-03 07:11:56.300 TRACE 19421 --- [http-nio-8094-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [12]
+2019-09-03 07:11:56.401 DEBUG 19421 --- [http-nio-8094-exec-5] org.hibernate.SQL                        : 
+    select
+        dept0_.dept_id as dept_id1_119_,
+        dept0_.add_date as add_date2_119_,
+        dept0_.del_status as del_stat3_119_,
+        dept0_.dept_name as dept_nam4_119_,
+        dept0_.ex_int1 as ex_int5_119_,
+        dept0_.ex_int2 as ex_int6_119_,
+        dept0_.ex_var1 as ex_var7_119_,
+        dept0_.ex_var2 as ex_var8_119_,
+        dept0_.institute_id as institut9_119_,
+        dept0_.is_active as is_acti10_119_,
+        dept0_.maker_user_id as maker_u11_119_ 
+    from
+        m_dept dept0_ 
+    where
+        dept0_.del_status=? 
+        and dept0_.is_active=? 
+        and dept0_.institute_id=? 
+    order by
+        dept0_.dept_id desc
+2019-09-03 07:11:56.401 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:11:56.401 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:11:56.401 TRACE 19421 --- [http-nio-8094-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [INTEGER] - [68]
+2019-09-03 07:11:56.511 DEBUG 19421 --- [http-nio-8094-exec-6] org.hibernate.SQL                        : 
+    select
+        quolificat0_.qualification_id as qualific1_138_,
+        quolificat0_.add_date as add_date2_138_,
+        quolificat0_.del_status as del_stat3_138_,
+        quolificat0_.maker_id as maker_id4_138_,
+        quolificat0_.qualification_name as qualific5_138_,
+        quolificat0_.type as type6_138_ 
+    from
+        m_qualificatoin quolificat0_ 
+    where
+        quolificat0_.type=? 
+        and quolificat0_.del_status=? 
+    order by
+        quolificat0_.qualification_id desc
+2019-09-03 07:11:56.511 TRACE 19421 --- [http-nio-8094-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2019-09-03 07:11:56.511 TRACE 19421 --- [http-nio-8094-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2019-09-03 07:12:05.435 DEBUG 19421 --- [http-nio-8094-exec-8] org.hibernate.SQL                        : 
+    SELECT
+        m_student_reg.institute_id ,
+        m_student_reg.student_id,
+        m_student_reg.dept_id,
+        m_student_reg.student_name,
+        m_student_reg.id_no,
+        m_student_reg.contact_no,
+        m_student_reg.email,
+        m_dept.dept_name ,
+        m_student_reg.acadamic_year as academic_year  
+    from
+        m_student_reg,
+        m_dept 
+    where
+        m_student_reg.del_status=1 
+        AND   m_dept.dept_id=m_student_reg.dept_id 
+        and   m_student_reg.institute_id =? 
+    ORDER BY
+        m_student_reg.student_id DESC
+2019-09-03 07:12:05.548 TRACE 19421 --- [http-nio-8094-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [68]
+2019-09-03 07:12:51.657  INFO 19421 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-03 07:12:51.781  INFO 19421 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-03 07:12:51.992  INFO 19421 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-03 07:12:52.286  INFO 19421 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
