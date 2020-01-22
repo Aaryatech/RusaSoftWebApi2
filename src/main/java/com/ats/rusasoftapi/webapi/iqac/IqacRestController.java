@@ -1,5 +1,7 @@
 package com.ats.rusasoftapi.webapi.iqac;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -348,7 +350,19 @@ public class IqacRestController {
 		System.out.println("  LOg****:"+staff.toString());
 		if(staff.getFacultyId()==0) {
 			String passWord = com.getAlphaNumericString(7);
-			staff.setPassword(passWord);
+			String hashtext = new String();
+			
+			try {
+				MessageDigest md = MessageDigest.getInstance("MD5");
+				byte[] messageDigest = md.digest(passWord.getBytes());
+				BigInteger number = new BigInteger(1, messageDigest);
+				hashtext = number.toString(16);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+			staff.setPassword(hashtext);
 
 			staffRes = staffrepo.save(staff);
 			
@@ -370,9 +384,9 @@ public class IqacRestController {
 			  // System.out.println("IQac LOg:"+userRes);*/
 		
 			  Info info=EmailUtility.sendEmail(senderEmail, senderPassword, staffRes.getEmail(), mailsubject,
-					  staffRes.getEmail(), staffRes.getPassword());
+					  staffRes.getEmail(), passWord);
 			  
-			  Info info1=EmailUtility.sendMsg(staffRes.getEmail(), staffRes.getPassword(), staffRes.getContactNo());
+			  Info info1=EmailUtility.sendMsg(staffRes.getEmail(), passWord, staffRes.getContactNo());
 				System.err.println("Info email sent response   "+info.toString());
 			
 		}else{
