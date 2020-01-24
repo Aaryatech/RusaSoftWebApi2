@@ -22,31 +22,48 @@ import com.ats.rusasoftapi.repository.ProgramVisionRepository;
 
 @RestController
 public class InstituteVissionMissionRestController {
-	
+
 	@Autowired
 	IntituteisionRepository intituteisionRepository;
 
 	@Autowired
 	InstituteMissionRepository instituteMissionRepository;
-	
+
 	@RequestMapping(value = { "/saveInstituteVision" }, method = RequestMethod.POST)
 	public @ResponseBody InstitueVision saveInstituteVision(@RequestBody InstitueVision institueVision) {
 
 		InstitueVision save = new InstitueVision();
 
-		try {
+		int instId = 0;
+		if (institueVision.getInstVisionId() > 0) {
+			//System.err.println("> 0");
+			try {
+				instId = intituteisionRepository.getInstId(institueVision.getInstVisionId());
+			} catch (Exception e) {
+				instId = 0;
+			}
 
+			try {
+
+				if (institueVision.getInstituteId() == instId) {
+					//System.err.println("A");
+					save = intituteisionRepository.saveAndFlush(institueVision);
+				}
+
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+		} else {
+			//System.err.println("B");
 			save = intituteisionRepository.saveAndFlush(institueVision);
 
-		} catch (Exception e) {
-
-			e.printStackTrace();
 		}
 
 		return save;
 
 	}
-	
+
 	@RequestMapping(value = { "/getInsituteVisionList" }, method = RequestMethod.POST)
 	public @ResponseBody List<InstitueVision> getInsituteVisionList(@RequestParam("instituteId") int instituteId) {
 
@@ -54,7 +71,8 @@ public class InstituteVissionMissionRestController {
 
 		try {
 
-			list = intituteisionRepository.findByDelStatusAndIsActiveAndInstituteIdOrderByInstVisionIdDesc(1, 1, instituteId);
+			list = intituteisionRepository.findByDelStatusAndIsActiveAndInstituteIdOrderByInstVisionIdDesc(1, 1,
+					instituteId);
 
 		} catch (Exception e) {
 
@@ -116,25 +134,53 @@ public class InstituteVissionMissionRestController {
 		return institueVision;
 
 	}
-	
+
 	@RequestMapping(value = { "/saveInstituteMission" }, method = RequestMethod.POST)
 	public @ResponseBody InstitueMission saveInstituteMission(@RequestBody InstitueMission institueMission) {
 
 		InstitueMission save = new InstitueMission();
 
-		try {
+		
+		int instId = 0;
+		if (institueMission.getInstMissionId() > 0) {
+			//System.err.println("> 0");
+			try {
+				instId = instituteMissionRepository.getInstId(institueMission.getInstMissionId());
+			} catch (Exception e) {
+				instId = 0;
+			}
 
+			try {
+
+				if (institueMission.getInstituteId() == instId) {
+					//System.err.println("A");
+					save = instituteMissionRepository.saveAndFlush(institueMission);
+				}
+
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+		} else {
+			//System.err.println("B");
 			save = instituteMissionRepository.saveAndFlush(institueMission);
 
-		} catch (Exception e) {
-
-			e.printStackTrace();
 		}
 
+		
+		/*
+		 * try {
+		 * 
+		 * save = instituteMissionRepository.saveAndFlush(institueMission);
+		 * 
+		 * } catch (Exception e) {
+		 * 
+		 * e.printStackTrace(); }
+		 */
 		return save;
 
 	}
-	
+
 	@RequestMapping(value = { "/getInsituteMissionList" }, method = RequestMethod.POST)
 	public @ResponseBody List<InstitueMission> getInsituteMissionList(@RequestParam("instituteId") int instituteId) {
 
@@ -142,7 +188,8 @@ public class InstituteVissionMissionRestController {
 
 		try {
 
-			list = instituteMissionRepository.findByDelStatusAndIsActiveAndInstituteIdOrderByInstMissionIdDesc(1, 1, instituteId);
+			list = instituteMissionRepository.findByDelStatusAndIsActiveAndInstituteIdOrderByInstMissionIdDesc(1, 1,
+					instituteId);
 
 		} catch (Exception e) {
 
@@ -188,7 +235,8 @@ public class InstituteVissionMissionRestController {
 	}
 
 	@RequestMapping(value = { "/getInstituteMissionByMissionId" }, method = RequestMethod.POST)
-	public @ResponseBody InstitueMission getInstituteMissionByMissionId(@RequestParam("instMissionId") int instMissionId) {
+	public @ResponseBody InstitueMission getInstituteMissionByMissionId(
+			@RequestParam("instMissionId") int instMissionId) {
 
 		InstitueMission institueMission = new InstitueMission();
 

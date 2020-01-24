@@ -23,4 +23,8 @@ public interface InstituteMissionRepository extends JpaRepository<InstitueMissio
 
 	InstitueMission findByInstMissionId(int instMissionId);
 
+	
+	@Query(value = "select  t_institute_mission.institute_id from t_institute_mission  WHERE inst_mission_id IN (:instMissionId) and del_status=1 order by inst_mission_id desc limit 1 ", nativeQuery = true)
+	int getInstId(@Param("instMissionId") int instMissionId);
+
 }

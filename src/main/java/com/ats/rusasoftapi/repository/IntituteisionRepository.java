@@ -21,5 +21,8 @@ public interface IntituteisionRepository extends JpaRepository<InstitueVision, I
 	int deleteInstiuteVision(@Param("instVisionId") int instVisionId);
 
 	InstitueVision findByInstVisionId(int instVisionId);
+	
+	@Query(value = "select  t_institute_vision.institute_id from t_institute_vision  WHERE inst_vision_id IN (:instVisionId) and del_status=1 order by inst_vision_id desc limit 1 ", nativeQuery = true)
+	int getInstId(@Param("instVisionId") int instVisionId);
 
 }
