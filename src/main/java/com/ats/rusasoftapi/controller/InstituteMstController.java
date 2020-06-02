@@ -74,8 +74,8 @@ public class InstituteMstController {
 String response=null;
 		Institute insResp = new Institute();
 		try {
-			
-			insResp=instituteRepo.findByAisheCodeAndDelStatus(aisheCode, 1);
+			//asds
+			insResp=instituteRepo.findByAisheCode(aisheCode);
 			//System.err.println("Inst with aishe " +insResp.toString());
 			if(insResp==null) {
 				response= "unique";

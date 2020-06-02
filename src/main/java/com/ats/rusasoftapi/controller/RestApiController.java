@@ -151,7 +151,7 @@ public class RestApiController {
 			System.err.println("User otp is" + otp1);
 			if(flag==1) {
 				Info inf = EmailUtility.sendOtp(otp1, conNumber, "RUSA OTP Verification ");
-
+				info.setMsg(otp1);
 			}
 			else if(flag==2){
 				Info emailRes = EmailUtility.sendEmail(senderEmail, senderPassword,emailId, mailsubject,
