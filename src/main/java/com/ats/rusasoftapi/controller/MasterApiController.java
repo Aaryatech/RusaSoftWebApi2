@@ -596,7 +596,7 @@ public class MasterApiController {
 		try {
 
 			String deptIdString = deptRepo.getDeptIdString(instId);
-			System.err.println("dept String " + deptIdString);
+			//System.err.println("dept String " + deptIdString);
 			if (deptIdString != null) {
 				List<Integer> deptIds = Stream.of(deptIdString.split(",")).map(Integer::parseInt)
 						.collect(Collectors.toList());
@@ -605,7 +605,7 @@ public class MasterApiController {
 			} else {
 				deptList = deptRepo.findByDelStatusAndIsActiveAndInstituteIdOrderByDeptIdDesc(1, 1, instId);
 			}
-			System.err.println("Dept List " + deptList.toString());
+			//System.err.println("Dept List " + deptList.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -620,9 +620,9 @@ public class MasterApiController {
 		List<Dept> deptList = new ArrayList<>();
 		try {
 
-			System.err.println("dept String from admin " + deptIdList.toString());
-			String deptIdString = deptRepo.getDeptIdString(instId);
-			System.err.println("dept String " + deptIdString);
+			//System.err.println("dept String from admin " + deptIdList.toString());
+			String deptIdString = deptRepo.getDeptIdStringForEditHod(instId,deptIdList);//sachin 08-10-2020
+			//System.err.println("dept String " + deptIdString);
 			if (deptIdString != null) {
 				List<Integer> deptIds = Stream.of(deptIdString.split(",")).map(Integer::parseInt)
 						.collect(Collectors.toList());
@@ -642,7 +642,7 @@ public class MasterApiController {
 			} else {
 				deptList = deptRepo.findByDelStatusAndIsActiveAndInstituteIdOrderByDeptIdDesc(1, 1, instId);
 			}
-			System.err.println("Dept List " + deptList.toString());
+			//System.err.println("Dept List " + deptList.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

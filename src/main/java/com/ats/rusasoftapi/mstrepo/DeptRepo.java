@@ -34,6 +34,10 @@ public interface DeptRepo extends JpaRepository<Dept, Integer> {
 	@Query(value="SELECT GROUP_CONCAT(m_faculty.dept_id) FROM m_faculty WHERE m_faculty.is_hod=1 AND m_faculty.institute_id=:instId AND m_faculty.del_status=1 and m_faculty.is_active=1 and m_faculty.is_blocked=0 ",nativeQuery=true)
 	String getDeptIdString(@Param("instId") int instId);
 	
+	@Query(value="SELECT GROUP_CONCAT(m_faculty.dept_id) FROM m_faculty WHERE m_faculty.is_hod=1 AND m_faculty.institute_id=:instId AND m_faculty.del_status=1 and m_faculty.is_active=1 and m_faculty.is_blocked=0"
+			+ " and  m_faculty.dept_id not in (:deptIds) ",nativeQuery=true)
+	String getDeptIdStringForEditHod(@Param("instId") int instId,@Param("deptIds") List<Integer> deptIds);
+	
 	
 	
 }

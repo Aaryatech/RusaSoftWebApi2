@@ -27,15 +27,15 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 
 	// 3
 	@Query(value = "SELECT" + 
-			"    UUID() AS id, SUM(" + 
+			"    UUID() AS id, IFNULL(SUM(" + 
 			"        t_program_student_location.female_student" + 
-			"    ) AS count," + 
-			"    SUM(" + 
+			"    ),0) AS count," + 
+			"    IFNULL(SUM(" + 
 			"        t_program_student_location.male_student" + 
-			"    ) AS count1," + 
-			"    SUM(" + 
+			"    ),0) AS count1," + 
+			"   IFNULL(SUM(" + 
 			"        t_program_student_location.trans_student" + 
-			"    ) AS data1," + 
+			"    ),0) AS data1," + 
 			"    0 AS data2" + 
 			" FROM   " + 
 			"    t_program_student_location " + 
@@ -96,9 +96,9 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 	// 2
 
 	@Query(value = "SELECT UUID() AS id," + 
-			"    SUM(" + 
+			"    IFNULL(SUM(" + 
 			"        t_program_student_location.loc_tot_student" + 
-			"    ) AS count,0 as count1,0 as data1,0 as data2" + 
+			"    ),0) AS count,0 as count1,0 as data1,0 as data2" + 
 			" FROM  " + 
 			"    t_program_student_location," + 
 			"    t_program," + 
@@ -241,9 +241,9 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 		//4
 		
 		@Query(value = "SELECT" + 
-				"    UUID() AS id, SUM(" + 
+				"    UUID() AS id, IFNULL(SUM(" + 
 				"        govt_scholarships.ex_int1" + 
-				"    ) AS count," + 
+				"    ),0) AS count," + 
 				"    0 AS count1," + 
 				"    0 AS data1," + 
 				"    0 AS data2" + 
@@ -262,9 +262,9 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 		
 		
 		@Query(value = "SELECT " + 
-				"    UUID() AS id, SUM( " + 
+				"    UUID() AS id, IFNULL(SUM( " + 
 				"        t_institute_schemes.ex_int1 " + 
-				"    ) AS count," + 
+				"    ),0) AS count," + 
 				"    0 AS count1," + 
 				"    0 AS data1," + 
 				"    0 AS data2 " + 
@@ -506,8 +506,8 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 
 		@Query(value="SELECT " + 
 				"	UUID() AS id, " + 
-				"	SUM(t_infrastructure_budget.budget_allocated) as count," + 	//allocated_amt
-				"	SUM(t_infrastructure_budget.budget_utilized) as count1," + 	//utillized_amt
+				"	IFNULL(SUM(t_infrastructure_budget.budget_allocated),0) as count," + 	//allocated_amt
+				"	IFNULL(SUM(t_infrastructure_budget.budget_utilized),0) as count1," + 	//utillized_amt
 				"	'Infrastructure Budget' as data1,"+	//budget_title
 				"   0 as data2 " + 		
 				"FROM   " + 
@@ -522,8 +522,8 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 		
 		@Query(value="SELECT " + 
 				"	UUID() AS id, " + 
-				"	SUM(t_physical_facility_budget.budget_allocated) as count," + //allocated_amt
-				"	SUM(t_physical_facility_budget.budget_utilized) as count1," + //utillized_amt
+				"	IFNULL(SUM(t_physical_facility_budget.budget_allocated),0) as count," + //allocated_amt
+				"	IFNULL(SUM(t_physical_facility_budget.budget_utilized),0) as count1," + //utillized_amt
 				"	'Physical Facility Budget' as data1," + //budget_title
 				"   0 as data2 " + 		
 				"FROM   " + 
@@ -537,8 +537,8 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 
 
 		@Query(value="SELECT UUID() AS id," + 
-				"	SUM(t_academic_budget.budget_allocated) as count," + //allocated_amt
-				"	SUM(t_academic_budget.budget_utilized) as count1," + //utillized_amt
+				"	IFNULL(SUM(t_academic_budget.budget_allocated),0) as count," + //allocated_amt
+				"	IFNULL(SUM(t_academic_budget.budget_utilized),0) as count1," + //utillized_amt
 				"	'Academic Facilities Budget' as data1, " + //budget_title
 				"   0 as data2 " + 	
 				"FROM   " + 
@@ -551,8 +551,8 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 
 
 		@Query(value="SELECT UUID() AS id," + 
-				"	SUM(t_library_budget.budget_allocated) as count," + 
-				"	SUM(t_library_budget.budget_utilized) as count1," + 
+				"	IFNULL(SUM(t_library_budget.budget_allocated),0) as count," + 
+				"	IFNULL(SUM(t_library_budget.budget_utilized),0) as count1," + 
 				"	'Library Budget' as data1, " + 
 				"   0 as data2 " + 	
 				"FROM   " + 
@@ -565,8 +565,8 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 		GetCountsForDash getLibraryFacilityBudgt(@Param("instId") int instId);
 
 		@Query(value="SELECT UUID() AS id," + 
-				"	SUM(t_library_book_budget.ex_int2) as count," + 
-				"    SUM(t_library_book_budget.expenditure_on_book_purchase) as count1," + 
+				"	IFNULL(SUM(t_library_book_budget.ex_int2),0) as count," + 
+				"    IFNULL(SUM(t_library_book_budget.expenditure_on_book_purchase),0) as count1," + 
 				"    'Books Budget' as data1," + 
 				"    0 as data2 " + 
 				"FROM   " + 
@@ -580,8 +580,8 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 
 
 		@Query(value="SELECT UUID() AS id," + 
-				"	SUM(t_waste_mngt_budget.budget_allocated) as count," + 
-				"	SUM(t_waste_mngt_budget.budget_utilized) as count1," + 
+				"	IFNULL(SUM(t_waste_mngt_budget.budget_allocated),0) as count," + 
+				"	IFNULL(SUM(t_waste_mngt_budget.budget_utilized),0) as count1," + 
 				"	'Green Initiatives' as data1, " + 
 				"   0 as data2 " + 	
 				"FROM   " + 

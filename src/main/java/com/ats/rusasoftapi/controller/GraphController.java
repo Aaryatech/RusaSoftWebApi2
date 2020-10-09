@@ -377,7 +377,12 @@ public class GraphController {
 				dash.setNoofprogram(temp.getCount());
 
 				temp = dashBoardCountsRepo.getNoOfBudgetForPrinci(instId);
+				//System.err.println("Temp Bud" +temp);
+				try {
 				dash.setCurrfinyearbudget(temp.getCount());
+				}catch (Exception e) {
+					dash.setCurrfinyearbudget(0);
+				}
 
 				temp = dashBoardCountsRepo.getNoOfBookPubForPrinci(instId);
 				dash.setNoofbookpub(temp.getCount());
