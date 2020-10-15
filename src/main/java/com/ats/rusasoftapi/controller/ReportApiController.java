@@ -358,6 +358,28 @@ public class ReportApiController {
 		List<NoOfMentorsAssignedStudent> facPartInVarBodies = new ArrayList<>();
 		try {
 
+			List<AcademicYear> acYrList = new ArrayList<AcademicYear>();
+
+
+	List<Integer> lastFiveYears = new ArrayList<>();
+	if (acYearList.contains("-5")) {
+		// System.err.println("in if ");
+		// System.err.println("in -5");
+		acYrList = academicYearRepo.getLastFiveYears();
+
+		for (int i = 0; i < acYrList.size(); i++) {
+			// acYearList.add(i, String.valueOf(acYrList.get(i).getYearId()));
+			System.err.println("acYrList" + acYrList.get(i).toString());
+			lastFiveYears.add(acYrList.get(i).getYearId());
+		}
+
+		// acYrList.remove(acYrList.size());
+		// System.err.println("new id list" + acYearList.toString());
+	} else {
+		System.err.println("in else ");
+		lastFiveYears.add(Integer.parseInt((acYearList.get(0))));
+
+	}
 			facPartInVarBodies = noOfMentorsAssignedStudentRepo.getNoOfMentorsAssignedStudent(instId);
 			System.err.println("List=" + facPartInVarBodies);
 
@@ -1830,8 +1852,7 @@ public class ReportApiController {
 
 			}
 
-			facPartInVarBodies = studEnrooledForProgramReportRepo.getStudEnrooledForProgramReport(instId, lastFiveYears,
-					programId);
+			facPartInVarBodies = studEnrooledForProgramReportRepo.getStudEnrooledForProgramReport(instId, lastFiveYears);
 			System.err.println("List=" + facPartInVarBodies);
 
 		} catch (Exception e) {

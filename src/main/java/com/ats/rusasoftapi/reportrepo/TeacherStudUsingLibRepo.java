@@ -41,7 +41,7 @@ public interface TeacherStudUsingLibRepo extends JpaRepository<TeacherStudUsingL
 			"        FROM\n" + 
 			"            m_library_info\n" + 
 			"        WHERE\n" + 
-			"            m_institute.institute_id = m_library_info.institute_id AND m_library_info.del_status = 1\n" + 
+			"            m_institute.institute_id = m_library_info.institute_id and m_library_info.ac_year_id=m_academic_year.year_id AND m_library_info.del_status = 1\n" + 
 			"    ),\n" + 
 			"    0\n" + 
 			"    ) AS avg_teacher,\n" + 
@@ -52,7 +52,7 @@ public interface TeacherStudUsingLibRepo extends JpaRepository<TeacherStudUsingL
 			"        FROM\n" + 
 			"            m_library_info\n" + 
 			"        WHERE\n" + 
-			"            m_institute.institute_id = m_library_info.institute_id AND m_library_info.del_status = 1\n" + 
+			"            m_institute.institute_id = m_library_info.institute_id and m_library_info.ac_year_id=m_academic_year.year_id AND m_library_info.del_status = 1\n" + 
 			"    ),\n" + 
 			"    0\n" + 
 			"    ) AS avg_student,\n" + 

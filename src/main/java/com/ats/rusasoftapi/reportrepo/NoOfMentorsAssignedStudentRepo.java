@@ -18,7 +18,7 @@ public interface NoOfMentorsAssignedStudentRepo extends JpaRepository<NoOfMentor
 			"    COALESCE(\n" + 
 			"        (\n" + 
 			"        SELECT\n" + 
-			"            COUNT(*)\n" + 
+			"            COUNT(DISTINCT t_faculty_mentoring.faculty_id)\n" + 
 			"        FROM\n" + 
 			"            t_faculty_mentoring,\n" + 
 			"            m_faculty\n" + 
@@ -30,9 +30,9 @@ public interface NoOfMentorsAssignedStudentRepo extends JpaRepository<NoOfMentor
 			"    COALESCE(\n" + 
 			"        (\n" + 
 			"        SELECT\n" + 
-			"            SUM(\n" + 
+			"            IFNULL(SUM(\n" + 
 			"                t_faculty_mentoring.men_stu_count\n" + 
-			"            )\n" + 
+			"            ),0)\n" + 
 			"        FROM\n" + 
 			"            t_faculty_mentoring,\n" + 
 			"            m_faculty\n" + 

@@ -22,7 +22,7 @@ public interface CapabilityEnhancementDevRepo extends JpaRepository<CapabilityEn
 			"    m_institute,\n" + 
 			"    t_support_scheme_detail\n" + 
 			"WHERE\n" + 
-			"    t_support_scheme_detail.institute_id =:instId AND t_support_scheme_detail.year_id IN(:acYrList) AND t_support_scheme_detail.institute_id = m_institute.institute_id AND t_support_scheme_detail.year_id = m_academic_year.year_id",nativeQuery=true)
+			"   t_support_scheme_detail.del_status=1 and  t_support_scheme_detail.institute_id =:instId AND t_support_scheme_detail.year_id IN(:acYrList) AND t_support_scheme_detail.institute_id = m_institute.institute_id AND t_support_scheme_detail.year_id = m_academic_year.year_id",nativeQuery=true)
 	List<CapabilityEnhancementDev> getAllCapabilityEnhancementDev(@Param("instId")int instId,@Param("acYrList") List<Integer> acYrList);
 	
 	
@@ -33,12 +33,12 @@ public interface CapabilityEnhancementDevRepo extends JpaRepository<CapabilityEn
 			"    t_support_scheme_detail.no_student_benifited,\n" + 
 			"    m_academic_year.academic_year,\n" + 
 			"    m_institute.institute_name\n" + 
-			"FROM\n" + 
-			"    m_academic_year,\n" + 
-			"    m_institute,\n" + 
-			"    t_support_scheme_detail\n" + 
-			"WHERE\n" + 
-			"    t_support_scheme_detail.institute_id =:instId AND t_support_scheme_detail.institute_id = m_institute.institute_id AND t_support_scheme_detail.year_id = m_academic_year.year_id AND t_support_scheme_detail.scheme_name='Vocational Education Training'",nativeQuery=true)
+			" FROM\n" + 
+			"    m_academic_year, " + 
+			"    m_institute, " + 
+			"    t_support_scheme_detail " + 
+			" WHERE " + 
+			"   t_support_scheme_detail.del_status=1 and  t_support_scheme_detail.institute_id =:instId AND t_support_scheme_detail.institute_id = m_institute.institute_id AND t_support_scheme_detail.year_id = m_academic_year.year_id AND t_support_scheme_detail.scheme_name='Vocational Education Training'",nativeQuery=true)
 	List<CapabilityEnhancementDev> getAllCapabilityEnhancementDevVET(@Param("instId")int instId);
 	
 }

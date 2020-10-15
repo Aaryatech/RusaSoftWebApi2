@@ -105,7 +105,25 @@ public class RusaReportsRestController {
 			@RequestParam int acYear) {
  		List<StudTeachrRatio> ratioList = new ArrayList<StudTeachrRatio>();
  		try {
- 			ratioList = studTeachRepo.getAllStudentTeacherRatioData(instId, acYear);
+ 			
+ 			List<AcademicYear> acYrList = new ArrayList<>();
+ 	 		
+ 	 			List<Integer> lastFiveYears=new ArrayList<>();
+ 	 	
+ 	 			if (acYear==-5) {
+ 					System.err.println("in -5");
+ 					acYrList =academicYearRepo.getLastFiveYears();
+ 					
+ 					for (int i = 0; i < acYrList.size(); i++) {
+ 						lastFiveYears.add(acYrList.get(i).getYearId());
+ 					}
+ 					 //System.err.println("new id list" + acYearList.toString());
+ 				}else {
+ 					System.err.println("in else ");
+ 					lastFiveYears.add(acYear);
+ 					
+ 				} 
+ 			ratioList = studTeachRepo.getAllStudentTeacherRatioData(instId, lastFiveYears);
  			System.err.println("List="+ratioList);
  		}catch(Exception e) {
  			System.err.println(e.getMessage());
@@ -124,8 +142,27 @@ public class RusaReportsRestController {
  			setKey=settingKeyValueRepo.findBySettingKeyAndDelStatus("Divyanjan",1);
 			System.err.println("stk ids :"+setKey.toString());
 			int stkId=setKey.getIntValue();
-			 			
-			studList = difStudRepo.getAllDifferentlyAbledStud(instId, acYear, stkId);
+			 		
+			
+			List<AcademicYear> acYrList = new ArrayList<>();
+ 	 		
+	 			List<Integer> lastFiveYears=new ArrayList<>();
+	 	
+	 			if (acYear==-5) {
+					System.err.println("in -5");
+					acYrList =academicYearRepo.getLastFiveYears();
+					
+					for (int i = 0; i < acYrList.size(); i++) {
+						lastFiveYears.add(acYrList.get(i).getYearId());
+					}
+					 //System.err.println("new id list" + acYearList.toString());
+				}else {
+					System.err.println("in else ");
+					lastFiveYears.add(acYear);
+					
+				} 
+	 			
+			studList = difStudRepo.getAllDifferentlyAbledStud(instId, lastFiveYears, stkId);
  			
  		}catch(Exception e) {
  			System.err.println(e.getMessage());
@@ -171,9 +208,23 @@ public class RusaReportsRestController {
 	public @ResponseBody List<FacAgnstSanctnPostOthrState> getFacultyAgnstSanctionPostOthrState(@RequestParam int instId,
 			@RequestParam int acYear) {
  		List<FacAgnstSanctnPostOthrState> facList = new ArrayList<FacAgnstSanctnPostOthrState>(); 		
+List<AcademicYear> acYrList = new ArrayList<>();
+ 		
  		try {
+ 			 List<Integer> lastFiveYears=new ArrayList<>();
+ 			if (acYear==-5) {
+				acYrList =academicYearRepo.getLastFiveYears();
+				for (int i = 0; i < acYrList.size(); i++) {
+					lastFiveYears.add(acYrList.get(i).getYearId());
+				}
+				 
+			}else {
+				System.err.println("in else ");
+				lastFiveYears.add(acYear);
+				
+			}    		
  						 			
-			facList = facOthrStateRepo.getAllFacultyAgnstSanctionPostOthrState(instId, acYear);
+			facList = facOthrStateRepo.getAllFacultyAgnstSanctionPostOthrState(instId, lastFiveYears);
  			
  		}catch(Exception e) {
  			System.err.println(e.getMessage());
@@ -468,7 +519,22 @@ public class RusaReportsRestController {
  		 		
  		try {
  			
- 			initiaveList = initivRepo.getAllInitivAddrsLoctnAdvDisadv(instId, acYearId);
+ 			List<AcademicYear> acYrList = new ArrayList<>();
+ 	 		
+	 			List<Integer> lastFiveYears=new ArrayList<>();
+	 	
+	 			if (acYearId==-5) {
+					acYrList =academicYearRepo.getLastFiveYears();
+					
+					for (int i = 0; i < acYrList.size(); i++) {
+						lastFiveYears.add(acYrList.get(i).getYearId());
+					}
+				}else {
+					lastFiveYears.add(acYearId);
+					
+				} 
+	 			
+ 			initiaveList = initivRepo.getAllInitivAddrsLoctnAdvDisadv(instId, lastFiveYears);
  			
  		}catch(Exception e) {
  			System.err.println(e.getMessage());
@@ -692,7 +758,7 @@ public class RusaReportsRestController {
  		List<StudProgression> studProgList = new ArrayList<StudProgression>();
  		 		
  		try {
- 			
+ 			acYear=1;
  			studProgList = studProgRepo.getAllStudProgression(instId, acYear);
  			
  		}catch(Exception e) {
