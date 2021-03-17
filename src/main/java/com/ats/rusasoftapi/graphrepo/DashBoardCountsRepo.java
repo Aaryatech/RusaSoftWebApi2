@@ -22,7 +22,7 @@ public interface DashBoardCountsRepo extends JpaRepository<GetCountsForDash, Int
 	@Query(value = "SELECT  UUID() AS id, "
 			+ "    COUNT(m_faculty.faculty_id) as count,0 as count1, 0 as data1,0 as data2 " + "FROM   "
 			+ "    m_faculty " + "WHERE    "
-			+ "    m_faculty.institute_id=:instId AND m_faculty.del_status = 1 AND m_faculty.is_active = 1 AND m_faculty.is_blocked=0 AND m_faculty.is_faculty=1 AND m_faculty.highest_qualification=1 ", nativeQuery = true)
+			+ "    m_faculty.institute_id=:instId AND m_faculty.del_status = 1 AND m_faculty.is_active = 1 AND m_faculty.is_blocked=0 AND m_faculty.is_faculty=1 AND m_faculty.highest_qualification IN (1,2) ", nativeQuery = true)
 	GetCountsForDash getNoOfFacultiesPHDForPrinci(@Param("instId") int instId);
 
 	// 3
